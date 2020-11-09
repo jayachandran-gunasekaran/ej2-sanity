@@ -7,6 +7,7 @@ export namespace Helper {
     export const baseUrl: string = 'https://ej2.syncfusion.com/demos/#/material/';
     export const schedule: object = By.css('.e-schedule');
     export const schedule1: object = By.css('.recurrence-editor-wrap');
+    export const schedule2: object = By.css('.container-fluid');
     export const toolbar: object = By.css('.e-sample-resize-container');
     export const tab: object = By.css('.e-tab');
     export const kanban: object = By.css('.e-kanban-content');

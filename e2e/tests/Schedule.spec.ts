@@ -169,7 +169,9 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         });
         browser.sleep(1000);
         browser.sleep(1000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Schedule/agenda_1');
+        await element(By.css('.e-content-table')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
         done();
     });
     it('Monthagendaview', async (done: DoneFn) => {
@@ -189,7 +191,9 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         });
         browser.sleep(1000);
         browser.sleep(1000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Schedule/yearview_1');
+        await element(By.css('.e-content-table')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
         done();
     });
     it('Individualview', async (done: DoneFn) => {
@@ -230,12 +234,14 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         });
         browser.sleep(1000);
         browser.sleep(1000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Schedule/farecal_1');
+        await element(By.css('.e-content-table')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
         done();
     });
     it('Resources', async (done: DoneFn) => {
         Helper.getAndWait(Helper.baseUrl + 'schedule/resource.html', Helper.schedule);
-        await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
+        await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
         browser.sleep(1000);
@@ -324,12 +330,11 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         done();
     });
     it('Cell', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.baseUrl + 'schedule/cell-template.html', Helper.schedule);
-        await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
+        Helper.getAndWait(Helper.baseUrl + 'schedule/cell-template.html', Helper.schedule2);
+        await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
-        browser.sleep(1000);
-        browser.sleep(1000);
+        browser.sleep(3000);
         browser.compareScreen(element(By.className('container-fluid')), 'Schedule/cell_1');
         done();
     });

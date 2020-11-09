@@ -45,20 +45,22 @@ let elementFinder: ElementFinder = element(By.css('.e-kanban-content'));
     });
     it('Stacked-header', async (done: DoneFn) => {
         Helper.getAndWait(Helper.baseUrl + 'kanban/stacked-header.html', Helper.kanban);
+        browser.sleep(1000);
         await element(By.css('.e-kanban-content')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
-        browser.sleep(1000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Kanban/stacked');
+        browser.sleep(3000);
+        browser.compareScreen(element(By.className('container-fluid')), 'Kanban/stackedheader');
         done();
     });
     it('Dialog-edit', async (done: DoneFn) => {
         Helper.getAndWait(Helper.baseUrl + 'kanban/dialog-editing.html', Helper.kanban);
+        browser.sleep(1000);
         await element(By.css('.e-kanban-content')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
-        browser.sleep(1000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Kanban/dialog');
+        browser.sleep(3000);
+        browser.compareScreen(element(By.className('container-fluid')), 'Kanban/dialogedit');
         done();
     });
     it('Search-event', async (done: DoneFn) => {
