@@ -1,0 +1,28 @@
+{
+    "name": "ej2-testing-typescript",
+    "version": "1.0.0",
+    "description": "TypeScript E2E Automation Testing",
+    "author": "Syncfusion Inc.",
+    "license": "SEE LICENSE IN license",
+    "private": true,
+    "dependencies": {
+        "@syncfusion/ej2-build": "*",
+        "@syncfusion/ej2-kanban": "*",
+        "@syncfusion/ej2-schedule": "*"
+    },
+    "devDependencies": {
+        "@types/chai": "3.4.28",
+        "@types/jasmine": "2.2.29",
+        "@types/jasmine-ajax": "3.1.27",
+        "@types/requirejs": "2.1.26",
+        "emailjs": "2.2.0",
+        "gulp": "3.9.1",
+        "protractor": "5.4.0",
+        "requirejs": "2.3.6"
+    },
+    "scripts": {
+        "start": "gulp start",
+        "test": "gulp e2e-ci-test",
+        "testdriver": "gulp e2e-webdriver-update && gulp e2e-webdriver-start"
+    }
+}
