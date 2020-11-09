@@ -4,7 +4,8 @@
 import { browser, element, By } from '@syncfusion/ej2-base/e2e/index';
 
 export namespace Helper {
-    export const baseUrl: string = 'https://ej2.syncfusion.com/demos/#/material/';
+    export const tsUrl: string = 'https://ej2.syncfusion.com/demos/#/material/';
+    export const jsUrl: string = 'https://ej2.syncfusion.com/javascript/demos/#/material/';
     export const schedule: object = By.css('.e-schedule');
     export const schedule1: object = By.css('.recurrence-editor-wrap');
     export const schedule2: object = By.css('.container-fluid');
