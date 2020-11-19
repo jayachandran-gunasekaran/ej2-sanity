@@ -6,7 +6,7 @@ import { Helper } from '../Helper/helper.spec';
 
 let elementFinder: ElementFinder = element(By.css('.e-sample-resize-container'));
 const sleepTime: number = 1000;
-    fdescribe('Vue Tabs Sanity', () => {
+    describe('Vue Tabs Sanity', () => {
         afterEach((done: DoneFn) => {
         // tslint:disable-next-line:no-backbone-get-set-outside-model
         browser.manage().logs().get('browser').then((browserLog: any) => {// tslint:disable-line:no-any

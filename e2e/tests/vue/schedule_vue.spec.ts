@@ -15,24 +15,8 @@ describe('Vue Schedule Sanity', () => {
         });
         done();
     });
-
-
-    it('Overview', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/overview.html', Helper.schedule);
-        browser.sleep(3000);
-        await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
-            expect(flag).toEqual(true);
-        });
-        browser.sleep(3000);
-        await element(By.css('.e-table-container')).isDisplayed().then((flag: boolean) => {
-            expect(flag).toEqual(true);
-        });
-        done();
-    });
-
     it('Default', async (done: DoneFn) => {
         Helper.getAndWait(Helper.vueUrl + 'schedule/default.html', Helper.schedule);
-        browser.sleep(3000);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -114,7 +98,7 @@ describe('Vue Schedule Sanity', () => {
     });
 
     it('Dragdrop', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/external-drag-drop.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/external-dragdrop.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -200,7 +184,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Individualview', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/views-configuration.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/view-configuration.html', Helper.schedule);
         browser.sleep(1000);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
@@ -221,7 +205,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Roomscheduler', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/timeline-resources.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/timeline-resource.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -263,7 +247,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Differentworkdays', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/group-custom-work-days.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/group-customworkdays.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -273,7 +257,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Showandhide', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/add-remove-resources.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/addremove-resources.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -303,7 +287,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Timelinegroup', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/timeline-resource-grouping.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/timeline-resourcegrouping.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -313,7 +297,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Datewisegroup', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/group-by-date.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/group-bydate.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -323,7 +307,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Hierarchicalgroup', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/group-by-child.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/group-bychild.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -342,7 +326,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Dateheader', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/date-header-template.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/dateheader-template.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -352,7 +336,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Events', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/event-template.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/events-template.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -392,7 +376,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Additionalfield', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/editor-custom-field.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/editor-customfields.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -482,7 +466,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Work-hour', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/work-hour.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/work-hours.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -492,7 +476,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Day-hourlimit', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/start-end-hour.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/startend-hour.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -512,7 +496,7 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Read-onlyevent', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.tsUrl + 'schedule/read-only-events.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/read-only.html', Helper.schedule);
         await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -553,20 +537,21 @@ describe('Vue Schedule Sanity', () => {
         done();
     });
     it('Rule-generate', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/recurrence-editor-generate-rule.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/receditor-generaterule.html', Helper.schedule);
         await element(By.css('.recurrence-editor-wrap')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
 
         });
         browser.sleep(1000);
-        browser.sleep(1000);
-        browser.compareScreen(element(By.className('control-section')), 'Schedulevue/rulegenerate_1');
+        await element(By.className('.container-fluid')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
         done();
     });
     it('Populate-rule', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.vueUrl + 'schedule/recurrence-editor-populate-rule.html', Helper.schedule);
+        Helper.getAndWait(Helper.vueUrl + 'schedule/receditor-populaterule.html', Helper.schedule);
         browser.sleep(1000);
-        await element(By.css('.recurrence-editor-wrap')).isDisplayed().then((flag: boolean) => {
+        await element(By.className('.RecurrenceEditor')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
         browser.sleep(3000);
