@@ -91,7 +91,7 @@ let elementFinder: ElementFinder = element(By.css('.e-kanban-content'));
         done();
     });
     it('Remote', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.tsUrl + 'kanban/remote-data.html', Helper.kanban1);
+        Helper.getAndWait(Helper.tsUrl + 'kanban/remote-data.html', Helper.kanban);
         browser.sleep(1000);
         await element(By.css('.e-kanban')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);

@@ -330,7 +330,7 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         done();
     });
     it('Cell', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.tsUrl + 'schedule/cell-template.html', Helper.schedule2);
+        Helper.getAndWait(Helper.tsUrl + 'schedule/cell-template.html', Helper.schedule);
         await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
         });
@@ -550,7 +550,7 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         done();
     });
     it('Rule-generate', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.tsUrl + 'schedule/recurrence-editor-generate-rule.html', Helper.schedule1);
+        Helper.getAndWait(Helper.tsUrl + 'schedule/recurrence-editor-generate-rule.html', Helper.schedule);
         await element(By.css('.recurrence-editor-wrap')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);
 
@@ -561,7 +561,7 @@ let elementFinder: ElementFinder = element(By.css('.e-schedule'));
         done();
     });
     it('Populate-rule', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.tsUrl + 'schedule/recurrence-editor-populate-rule.html', Helper.schedule1);
+        Helper.getAndWait(Helper.tsUrl + 'schedule/recurrence-editor-populate-rule.html', Helper.schedule);
         browser.sleep(1000);
         await element(By.css('.recurrence-editor-wrap')).isDisplayed().then((flag: boolean) => {
             expect(flag).toEqual(true);

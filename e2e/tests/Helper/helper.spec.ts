@@ -6,13 +6,13 @@ import { browser, element, By } from '@syncfusion/ej2-base/e2e/index';
 export namespace Helper {
     export const tsUrl: string = 'https://ej2.syncfusion.com/demos/#/material/';
     export const jsUrl: string = 'https://ej2.syncfusion.com/javascript/demos/#/material/';
+    export const reactUrl: string = 'https://ej2.syncfusion.com/react/demos/#/material/';
+    export const anglrUrl: string = 'https://ej2.syncfusion.com/angular/demos/#/material/';
+    export const vueUrl: string = 'https://ej2.syncfusion.com/vue/demos/#/material/';
     export const schedule: object = By.css('.e-schedule');
-    export const schedule1: object = By.css('.recurrence-editor-wrap');
-    export const schedule2: object = By.css('.container-fluid');
-    export const toolbar: object = By.css('.e-sample-resize-container');
+    export const toolbar: object = By.css('.e-toolbar');
     export const tab: object = By.css('.e-tab');
     export const kanban: object = By.css('.e-kanban-content');
-    export const kanban1: object = By.css('.e-kanban');
     export const card: object = By.css('.e-card');
     export const accordion: object = By.css('.e-accordion');
     export const button: object = By.id('radio2');
