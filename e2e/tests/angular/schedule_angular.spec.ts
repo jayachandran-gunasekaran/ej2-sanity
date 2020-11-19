@@ -5,7 +5,7 @@
 import { Helper } from '../Helper/helper.spec';
 let elementFinder: ElementFinder = element(By.css('.e-schedule'));
 
-fdescribe('Angular Schedule Sanity', () => {
+describe('Angular Schedule Sanity', () => {
     afterEach((done: DoneFn) => {
         // tslint:disable-next-line:no-backbone-get-set-outside-model
         browser.manage().logs().get('browser').then((browserLog: any) => {// tslint:disable-line:no-any

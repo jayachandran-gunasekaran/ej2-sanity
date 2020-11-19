@@ -5,8 +5,8 @@ import { browser, element, By, ElementFinder } from '@syncfusion/ej2-base/e2e/in
 import { Helper } from '../Helper/helper.spec';
 let elementFinder: ElementFinder = element(By.css('.e-accordion'));
 
-    describe('Vue Accordion Sanity', () => {
-        afterEach((done: DoneFn) => {
+describe('Vue Accordion Sanity', () => {
+    afterEach((done: DoneFn) => {
         // tslint:disable-next-line:no-backbone-get-set-outside-model
         browser.manage().logs().get('browser').then((browserLog: any) => {​​​​​​​​// tslint:disable-line:no-any
             if (browserLog.length) {
