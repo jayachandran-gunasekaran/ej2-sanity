@@ -5,7 +5,7 @@
 import { Helper } from '../Helper/helper.spec';
 let elementFinder: ElementFinder = element(By.css('.e-schedule'));
 
-describe('Angular Schedule Sanity', () => {
+fdescribe('Angular Schedule Sanity', () => {
     afterEach((done: DoneFn) => {
         // tslint:disable-next-line:no-backbone-get-set-outside-model
         browser.manage().logs().get('browser').then((browserLog: any) => {// tslint:disable-line:no-any
@@ -13,20 +13,6 @@ describe('Angular Schedule Sanity', () => {
                 // tslint:disable-next-line:no-console
                 console.log('\x1b[31m', JSON.stringify(browserLog));
             }
-        });
-        done();
-    });
-
-
-    it('Overview', async (done: DoneFn) => {
-        Helper.getAndWait(Helper.anglrUrl + 'schedule/overview', Helper.schedule);
-        await element(By.css('.e-schedule')).isDisplayed().then((flag: boolean) => {
-            expect(flag).toEqual(true);
-        });
-        browser.sleep(3000);
-
-        await element(By.css('.e-table-container')).isDisplayed().then((flag: boolean) => {
-            expect(flag).toEqual(true);
         });
         done();
     });

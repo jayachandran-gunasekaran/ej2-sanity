@@ -561,7 +561,10 @@ describe('React Schedule Sanity', () => {
         });
         browser.sleep(1000);
         browser.sleep(1000);
-        browser.compareScreen(element(By.className('control-section')), 'Schedulereact/rulegenerate_1');
+        await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
+        //browser.compareScreen(element(By.className('control-section')), 'Schedulereact/rulegenerate_1');
         done();
     });
     it('Populate-rule', async (done: DoneFn) => {

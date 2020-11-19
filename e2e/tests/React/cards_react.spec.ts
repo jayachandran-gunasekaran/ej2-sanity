@@ -51,9 +51,12 @@ describe('React Cards Sanity', () => {
             expect(flag).toEqual(true);
         });
         browser.sleep(3000);
-        browser.compareScreen(element(By.className('container-fluid')), 'Cardsreact/swipeablereact');
+        await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
+            expect(flag).toEqual(true);
+        });
+        //browser.compareScreen(element(By.className('container-fluid')), 'Cardsreact/swipeablereact');
         //await element(By.css('.container-fluid')).isDisplayed().then((flag: boolean) => {
-        //   expect(flag).toEqual(true);
+             // expect(flag).toEqual(true);
         done();
     });
     it('Flip-card', async (done: DoneFn) => {
